@@ -6,26 +6,23 @@
     <Grid HorizontalOptions="FillAndExpand"
           VerticalOptions="FillAndExpand">
         <!--Content List View-->
-        <ListView x:Name="EntryListView"
-                  HasUnevenRows="True"
-                  ItemsSource="{Binding QuantityList}">
+        <CollectionView x:Name="EntryCollectionView"
+                        ItemsSource="{Binding QuantityList}">
             <!--List View Item Template-->
-            <ListView.ItemTemplate>
+            <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <ViewCell>
-                        <ViewCell.View>
-                            <!--View cell view-->
-                            <Grid Padding="4"
+                    <!--Data Template view-->
+                    <Grid Padding="4"
                                   ColumnDefinitions=".3*,.7*">
-                                <!--Title Label-->
-                                <Label x:Name="lblTitle"
+                        <!--Title Label-->
+                        <Label x:Name="lblTitle"
                                        Grid.Column="0"
                                        Margin="1,5"
                                        FontSize="12"
                                        Text="{Binding Title}"
                                        TextColor="Black" />
-                               <!--Quantity entry-->
-                                <Entry x:Name="txtEntry"
+                        <!--Quantity entry-->
+                        <Entry x:Name="txtEntry"
                                        Grid.Column="1"
                                        Margin="4,0,4,0"
                                        Completed="TxtEntryCompleted"
@@ -36,12 +33,10 @@
                                        Keyboard="Numeric"
                                        Text="{Binding Quantity}"
                                        AutomationId="{Binding EntryId}">
-                                </Entry>
-                            </Grid>
-                        </ViewCell.View>
-                    </ViewCell>
+                        </Entry>
+                    </Grid>
                 </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
     </Grid>
 </ContentPage>

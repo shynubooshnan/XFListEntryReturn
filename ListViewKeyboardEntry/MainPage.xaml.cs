@@ -1,6 +1,7 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -49,19 +50,20 @@ namespace ListViewKeyboardEntry
         /// <param name="e"></param>
         private void TxtEntryCompleted(object sender, EventArgs e)
         {
-            var entry = sender as Entry; 
-            if(entry != null)
+            if (sender is Entry entry)
             {
-                var list = EntryListView.TemplatedItems.ToList();
+                var list = (entry?.Parent?.Parent as CollectionView)?.LogicalChildren;
+                if (list == null)
+                    return;
                 var index = Convert.ToInt32(entry.AutomationId) - 1;
                 if ((index + 1) >= list.Count)
                     return;
                 var nextIndex = index + 1;
                 //Entry is added as second element on view cell grid. So, select children of element 1
-                var next = ((list[nextIndex] as ViewCell).View as Grid).Children.ElementAt(1);
+                var next = (list[nextIndex] as Grid).Children.ElementAt(1);
                 next?.Focus();
             }
-            
+
         }
     }
 
