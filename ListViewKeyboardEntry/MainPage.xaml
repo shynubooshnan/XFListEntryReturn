@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ListViewKeyboardEntry.MainPage">
+
+    <Grid HorizontalOptions="FillAndExpand"
+          VerticalOptions="FillAndExpand">
+        <!--Content List View-->
+        <ListView x:Name="EntryListView"
+                  HasUnevenRows="True"
+                  ItemsSource="{Binding QuantityList}">
+            <!--List View Item Template-->
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.View>
+                            <!--View cell view-->
+                            <Grid Padding="4"
+                                  ColumnDefinitions=".3*,.7*">
+                                <!--Title Label-->
+                                <Label x:Name="lblTitle"
+                                       Grid.Column="0"
+                                       Margin="1,5"
+                                       FontSize="12"
+                                       Text="{Binding Title}"
+                                       TextColor="Black" />
+                               <!--Quantity entry-->
+                                <Entry x:Name="txtEntry"
+                                       Grid.Column="1"
+                                       Margin="4,0,4,0"
+                                       Completed="TxtEntryCompleted"
+                                       FontAttributes="Bold"
+                                       FontSize="14"
+                                       HorizontalOptions="FillAndExpand"
+                                       HorizontalTextAlignment="Center"
+                                       Keyboard="Numeric"
+                                       Text="{Binding Quantity}"
+                                       AutomationId="{Binding EntryId}">
+                                </Entry>
+                            </Grid>
+                        </ViewCell.View>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+</ContentPage>
