@@ -4,25 +4,38 @@
              x:Class="ListViewKeyboardEntry.MainPage">
 
     <Grid HorizontalOptions="FillAndExpand"
-          VerticalOptions="FillAndExpand">
+          VerticalOptions="FillAndExpand"
+          RowDefinitions="54,*">
+        <!--Title Label-->
+        <Label Grid.Row="0"
+               BackgroundColor="Black"
+               TextColor="White"
+               FontSize="16"
+               FontAttributes="Bold"
+               HorizontalTextAlignment="Center"
+               VerticalTextAlignment="Center"
+               Text="Quantity Entry"/>
         <!--Content List View-->
-        <CollectionView x:Name="EntryCollectionView"
-                        ItemsSource="{Binding QuantityList}">
-            <!--List View Item Template-->
-            <CollectionView.ItemTemplate>
-                <DataTemplate>
-                    <!--Data Template view-->
-                    <Grid Padding="4"
-                                  ColumnDefinitions=".3*,.7*">
-                        <!--Title Label-->
-                        <Label x:Name="lblTitle"
+        <ScrollView Grid.Row="1">
+            <CollectionView x:Name="EntryCollectionView"
+                            HeightRequest="{Binding CollectionViewHeight}"
+                            ItemsSource="{Binding QuantityList}">
+                <!--List View Item Template-->
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <!--Data Template view-->
+                        <Grid Padding="4"
+                          HeightRequest="44"
+                          ColumnDefinitions=".3*,.7*">
+                            <!--Title Label-->
+                            <Label x:Name="lblTitle"
                                        Grid.Column="0"
                                        Margin="1,5"
                                        FontSize="12"
                                        Text="{Binding Title}"
                                        TextColor="Black" />
-                        <!--Quantity entry-->
-                        <Entry x:Name="txtEntry"
+                            <!--Quantity entry-->
+                            <Entry x:Name="txtEntry"
                                        Grid.Column="1"
                                        Margin="4,0,4,0"
                                        Completed="TxtEntryCompleted"
@@ -33,10 +46,11 @@
                                        Keyboard="Numeric"
                                        Text="{Binding Quantity}"
                                        AutomationId="{Binding EntryId}">
-                        </Entry>
-                    </Grid>
-                </DataTemplate>
-            </CollectionView.ItemTemplate>
-        </CollectionView>
+                            </Entry>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </ScrollView>
     </Grid>
 </ContentPage>
