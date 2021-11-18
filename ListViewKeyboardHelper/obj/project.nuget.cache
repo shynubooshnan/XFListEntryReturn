@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "1N9T8KpH+p2c8GtOHOQChCG0fZHq90EZf3Aezk1rGV+fWuU33y2C8AaDBr22OW8VtBb3a7e8RJiZKdAh5r+TkA==",
+  "success": true,
+  "projectFilePath": "D:\\ListViewPOC\\ListViewKeyboardHelper\\ListViewKeyboardHelper.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\9000593\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\9000593\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

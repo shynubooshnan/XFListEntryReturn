@@ -975,6 +975,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
+          "ListViewKeyboardHelper": "1.0.0",
           "Xamarin.Essentials": "1.6.1",
           "Xamarin.Forms": "5.0.0.2012"
         },
@@ -983,6 +984,16 @@
         },
         "runtime": {
           "bin/placeholder/ListViewKeyboardEntry.dll": {}
+        }
+      },
+      "ListViewKeyboardHelper/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/ListViewKeyboardHelper.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ListViewKeyboardHelper.dll": {}
         }
       }
     }
@@ -2132,11 +2143,17 @@
       "type": "project",
       "path": "../ListViewKeyboardEntry/ListViewKeyboardEntry.csproj",
       "msbuildProject": "../ListViewKeyboardEntry/ListViewKeyboardEntry.csproj"
+    },
+    "ListViewKeyboardHelper/1.0.0": {
+      "type": "project",
+      "path": "../ListViewKeyboardHelper/ListViewKeyboardHelper.csproj",
+      "msbuildProject": "../ListViewKeyboardHelper/ListViewKeyboardHelper.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "MonoAndroid,Version=v11.0": [
       "ListViewKeyboardEntry >= 1.0.0",
+      "ListViewKeyboardHelper >= 1.0.0",
       "Xamarin.Essentials >= 1.6.1",
       "Xamarin.Forms >= 5.0.0.2012"
     ]
@@ -2180,6 +2197,9 @@
           "projectReferences": {
             "D:\\ListViewPOC\\ListViewKeyboardEntry\\ListViewKeyboardEntry.csproj": {
               "projectPath": "D:\\ListViewPOC\\ListViewKeyboardEntry\\ListViewKeyboardEntry.csproj"
+            },
+            "D:\\ListViewPOC\\ListViewKeyboardHelper\\ListViewKeyboardHelper.csproj": {
+              "projectPath": "D:\\ListViewPOC\\ListViewKeyboardHelper\\ListViewKeyboardHelper.csproj"
             }
           }
         }

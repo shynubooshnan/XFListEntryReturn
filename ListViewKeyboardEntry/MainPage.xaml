@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="ListViewKeyboardEntry.MainPage">
+             x:Class="ListViewKeyboardEntry.MainPage"
+             xmlns:renderer="clr-namespace:ListViewKeyboardEntry">
 
     <Grid HorizontalOptions="FillAndExpand"
           VerticalOptions="FillAndExpand"
@@ -25,28 +26,28 @@
                     <DataTemplate>
                         <!--Data Template view-->
                         <Grid Padding="4"
-                          HeightRequest="44"
                           ColumnDefinitions=".3*,.7*">
                             <!--Title Label-->
                             <Label x:Name="lblTitle"
-                                       Grid.Column="0"
-                                       Margin="1,5"
-                                       FontSize="12"
-                                       Text="{Binding Title}"
-                                       TextColor="Black" />
+                                   Grid.Column="0"
+                                   Margin="1,5"
+                                   FontSize="12"
+                                   Text="{Binding Title}"
+                                   TextColor="Black" />
                             <!--Quantity entry-->
-                            <Entry x:Name="txtEntry"
-                                       Grid.Column="1"
-                                       Margin="4,0,4,0"
-                                       Completed="TxtEntryCompleted"
-                                       FontAttributes="Bold"
-                                       FontSize="14"
-                                       HorizontalOptions="FillAndExpand"
-                                       HorizontalTextAlignment="Center"
-                                       Keyboard="Numeric"
-                                       Text="{Binding Quantity}"
-                                       AutomationId="{Binding EntryId}">
-                            </Entry>
+                            <renderer:CustomEntry x:Name="txtEntry"
+                                                  Grid.Column="1"
+                                                  Margin="4,0,4,0"
+                                                  ReturnType="{Binding KeyboardReturnType}"
+                                                  Completed="TxtEntryCompleted"
+                                                  FontAttributes="Bold"
+                                                  FontSize="14"
+                                                  HorizontalOptions="FillAndExpand"
+                                                  HorizontalTextAlignment="Center"
+                                                  Keyboard="Numeric"
+                                                  Text="{Binding Quantity}"
+                                                  AutomationId="{Binding EntryId}">
+                            </renderer:CustomEntry>
                         </Grid>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>

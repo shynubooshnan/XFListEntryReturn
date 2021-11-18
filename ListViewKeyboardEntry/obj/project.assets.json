@@ -63,6 +63,16 @@
           "buildTransitive/Xamarin.Forms.props": {},
           "buildTransitive/Xamarin.Forms.targets": {}
         }
+      },
+      "ListViewKeyboardHelper/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/ListViewKeyboardHelper.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/ListViewKeyboardHelper.dll": {}
+        }
       }
     }
   },
@@ -524,10 +534,16 @@
         "xamarin.forms.5.0.0.2012.nupkg.sha512",
         "xamarin.forms.nuspec"
       ]
+    },
+    "ListViewKeyboardHelper/1.0.0": {
+      "type": "project",
+      "path": "../ListViewKeyboardHelper/ListViewKeyboardHelper.csproj",
+      "msbuildProject": "../ListViewKeyboardHelper/ListViewKeyboardHelper.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
+      "ListViewKeyboardHelper >= 1.0.0",
       "NETStandard.Library >= 2.0.3",
       "Xamarin.Essentials >= 1.6.1",
       "Xamarin.Forms >= 5.0.0.2012"
@@ -571,7 +587,11 @@
       "frameworks": {
         "netstandard2.0": {
           "targetAlias": "netstandard2.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\ListViewPOC\\ListViewKeyboardHelper\\ListViewKeyboardHelper.csproj": {
+              "projectPath": "D:\\ListViewPOC\\ListViewKeyboardHelper\\ListViewKeyboardHelper.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

@@ -28,3 +28,6 @@ D:\ListViewPOC\ListViewKeyboardEntry\bin\Debug\netstandard2.0\ListViewKeyboardEn
 D:\ListViewPOC\ListViewKeyboardEntry\bin\Debug\netstandard2.0\ref\ListViewKeyboardEntry.dll
 D:\ListViewPOC\ListViewKeyboardEntry\bin\Debug\netstandard2.0\ListViewKeyboardEntry.pdb
 D:\ListViewPOC\ListViewKeyboardEntry\obj\Debug\netstandard2.0\XamlC.stamp
+D:\ListViewPOC\ListViewKeyboardEntry\bin\Debug\netstandard2.0\ListViewKeyboardHelper.dll
+D:\ListViewPOC\ListViewKeyboardEntry\bin\Debug\netstandard2.0\ListViewKeyboardHelper.pdb
+D:\ListViewPOC\ListViewKeyboardEntry\obj\Debug\netstandard2.0\ListViewKeyboardEntry.csproj.CopyComplete

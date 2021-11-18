@@ -5,6 +5,7 @@ public class MonoPackageManager_Resources {
 		"ListViewKeyboardEntry.Android.dll",
 		"FormsViewGroup.dll",
 		"ListViewKeyboardEntry.dll",
+		"ListViewKeyboardHelper.dll",
 		"Xamarin.AndroidX.Activity.dll",
 		"Xamarin.AndroidX.Annotation.dll",
 		"Xamarin.AndroidX.Annotation.Experimental.dll",

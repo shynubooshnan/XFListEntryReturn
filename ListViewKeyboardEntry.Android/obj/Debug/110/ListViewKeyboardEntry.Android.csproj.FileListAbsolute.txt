@@ -1150,3 +1150,8 @@ D:\ListViewPOC\ListViewKeyboardEntry.Android\obj\Debug\110\stamp\_ConvertResourc
 D:\ListViewPOC\ListViewKeyboardEntry.Android\obj\Debug\110\stamp\_GenerateJavaStubs.stamp
 D:\ListViewPOC\ListViewKeyboardEntry.Android\obj\Debug\110\stamp\_GeneratePackageManagerJava.stamp
 D:\ListViewPOC\ListViewKeyboardEntry.Android\obj\Debug\110\stamp\_ResolveLibraryProjectImports.stamp
+D:\ListViewPOC\ListViewKeyboardEntry.Android\bin\Debug\ListViewKeyboardHelper.dll
+D:\ListViewPOC\ListViewKeyboardEntry.Android\bin\Debug\ListViewKeyboardHelper.pdb
+D:\ListViewPOC\ListViewKeyboardEntry.Android\obj\Debug\110\android\assets\ListViewKeyboardHelper.dll
+D:\ListViewPOC\ListViewKeyboardEntry.Android\obj\Debug\110\android\assets\ListViewKeyboardHelper.pdb
+D:\ListViewPOC\ListViewKeyboardEntry.Android\obj\Debug\110\android\src\crc64c7949e7e4da1adad\CustomEntryRenderer.java

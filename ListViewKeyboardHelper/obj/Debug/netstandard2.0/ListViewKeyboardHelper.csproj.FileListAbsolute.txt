@@ -1,0 +1,9 @@
+D:\ListViewPOC\ListViewKeyboardHelper\bin\Debug\netstandard2.0\ListViewKeyboardHelper.deps.json
+D:\ListViewPOC\ListViewKeyboardHelper\bin\Debug\netstandard2.0\ListViewKeyboardHelper.dll
+D:\ListViewPOC\ListViewKeyboardHelper\bin\Debug\netstandard2.0\ListViewKeyboardHelper.pdb
+D:\ListViewPOC\ListViewKeyboardHelper\obj\Debug\netstandard2.0\ListViewKeyboardHelper.GeneratedMSBuildEditorConfig.editorconfig
+D:\ListViewPOC\ListViewKeyboardHelper\obj\Debug\netstandard2.0\ListViewKeyboardHelper.AssemblyInfoInputs.cache
+D:\ListViewPOC\ListViewKeyboardHelper\obj\Debug\netstandard2.0\ListViewKeyboardHelper.AssemblyInfo.cs
+D:\ListViewPOC\ListViewKeyboardHelper\obj\Debug\netstandard2.0\ListViewKeyboardHelper.csproj.CoreCompileInputs.cache
+D:\ListViewPOC\ListViewKeyboardHelper\obj\Debug\netstandard2.0\ListViewKeyboardHelper.dll
+D:\ListViewPOC\ListViewKeyboardHelper\obj\Debug\netstandard2.0\ListViewKeyboardHelper.pdb

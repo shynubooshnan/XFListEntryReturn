@@ -5,6 +5,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ListViewKeyboardHelper;
 using Xamarin.Forms;
 
 namespace ListViewKeyboardEntry
@@ -46,25 +47,25 @@ namespace ListViewKeyboardEntry
 
             QuantityList = new List<Item>
             {
-                new Item{Title = "Quantity1", Quantity = "0", EntryId = 1},
-                new Item{Title = "Quantity2", Quantity = "0", EntryId = 2},
-                new Item{Title = "Quantity3", Quantity = "0", EntryId = 3},
-                new Item{Title = "Quantity4", Quantity = "0", EntryId = 4},
-                new Item{Title = "Quantity5", Quantity = "0", EntryId = 5},
-                new Item{Title = "Quantity6", Quantity = "0", EntryId = 6},
-                new Item{Title = "Quantity7", Quantity = "0", EntryId = 7},
-                new Item{Title = "Quantity8", Quantity = "0", EntryId = 8},
-                new Item{Title = "Quantity9", Quantity = "0", EntryId = 9},
-                new Item{Title = "Quantity10", Quantity = "0", EntryId = 10},
-                new Item{Title = "Quantity11", Quantity = "0", EntryId = 11},
-                new Item{Title = "Quantity12", Quantity = "0", EntryId = 12},
-                new Item{Title = "Quantity13", Quantity = "0", EntryId = 13},
-                new Item{Title = "Quantity14", Quantity = "0", EntryId = 14},
-                new Item{Title = "Quantity15", Quantity = "0", EntryId = 15}
+                new Item{Title = "Quantity1", Quantity = "0", EntryId = 1, KeyboardReturnType = ReturnType.Next},
+                new Item{Title = "Quantity2", Quantity = "0", EntryId = 2, KeyboardReturnType = ReturnType.Default},
+                new Item{Title = "Quantity3", Quantity = "0", EntryId = 3, KeyboardReturnType = ReturnType.Next},
+                new Item{Title = "Quantity4", Quantity = "0", EntryId = 4, KeyboardReturnType = ReturnType.Next},
+                new Item{Title = "Quantity5", Quantity = "0", EntryId = 5, KeyboardReturnType = ReturnType.Default},
+                new Item{Title = "Quantity6", Quantity = "0", EntryId = 6, KeyboardReturnType = ReturnType.Default},
+                new Item{Title = "Quantity7", Quantity = "0", EntryId = 7, KeyboardReturnType = ReturnType.Default},
+                new Item{Title = "Quantity8", Quantity = "0", EntryId = 8, KeyboardReturnType = ReturnType.Default},
+                new Item{Title = "Quantity9", Quantity = "0", EntryId = 9, KeyboardReturnType = ReturnType.Default},
+                new Item{Title = "Quantity10", Quantity = "0", EntryId = 10, KeyboardReturnType = ReturnType.Default},
+                new Item{Title = "Quantity11", Quantity = "0", EntryId = 11, KeyboardReturnType = ReturnType.Default},
+                new Item{Title = "Quantity12", Quantity = "0", EntryId = 12, KeyboardReturnType = ReturnType.Default},
+                new Item{Title = "Quantity13", Quantity = "0", EntryId = 13, KeyboardReturnType = ReturnType.Default},
+                new Item{Title = "Quantity14", Quantity = "0", EntryId = 14, KeyboardReturnType = ReturnType.Default},
+                new Item{Title = "Quantity15", Quantity = "0", EntryId = 15, KeyboardReturnType = ReturnType.Default}
             };
 
             //set collection view height
-            CollectionViewHeight = QuantityList.Count * 40;
+            CollectionViewHeight = QuantityList.Count * 54;
             BindingContext = this;
         }
 
@@ -75,6 +76,8 @@ namespace ListViewKeyboardEntry
         /// <param name="e"></param>
         private void TxtEntryCompleted(object sender, EventArgs e)
         {
+            if (UtilityHelper.ShouldBlockReturn)
+                return;
             if (sender is Entry entry)
             {
                 _nextIndex = 0;
@@ -107,6 +110,7 @@ namespace ListViewKeyboardEntry
         public string Title { get; set; }
         public string Quantity { get; set; }
         public int EntryId { get; set; }
+        public ReturnType KeyboardReturnType { get; set; }
     }
 
 
